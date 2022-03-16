@@ -100,8 +100,8 @@ from matplotlib import pyplot as plt
 import os
 
 #load the model we pickled previously
-filename = 'cervix fibril detection model'
-print('loading cervix fibril detection model')
+filename = 'defect detection model'
+print('loading defect detection model')
 load_model = pickle.load(open(filename, 'rb'))
 
 #declare folder where images are (the images i want to analyze)
