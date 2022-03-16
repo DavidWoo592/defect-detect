@@ -226,8 +226,8 @@ print("accuracy = ", metrics.accuracy_score(y_test, prediction_test))
 ###########################################################################
 
 #now that we have trained a model, dump this model (whatever name you want) into a pickle file
-print('saving model as cervix fibril detection model')
-model_name = 'cervix fibril detection model'
+print('saving model as defect detection model')
+model_name = 'defect detection model'
 pickle.dump(model,open(model_name, 'wb'))
 
 print('training model complete with 10 estimators, 20% test size')
