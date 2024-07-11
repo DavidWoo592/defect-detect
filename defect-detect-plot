@@ -1,0 +1,36 @@
+"""
+This code seeks to generate customizable plots and graphs from importing a
+.csv file
+"""
+
+#########################################################
+# IMPORT AND VIEW .CSV FILE
+#########################################################
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sb
+import numpy as np
+
+#set the path for the dataset.csv
+df = pd.read_csv("C:\\Users\\wooda\\defect-detect\\exampleDataset.csv")
+print(df.head())
+
+#########################################################
+# PARAMETERS FOR SCATTER PLOT
+#########################################################
+
+#set the boundaries for the graph: xmin, xmax, ymin, ymax
+plt.axis([0, 80, 0, 200]) 
+#connects the scatter plot points together and sets the graph key based on what hue is equal to
+sb.lineplot(x='Age', y='Bananas Eaten', hue='Residence', data=df, marker='o')
+#set the labels for the graph
+plt.xlabel('AGE') 
+plt.ylabel('# OF BANANAS EATEN')
+plt.title('AGE ON BANANA CONSUMPTION')
+
+#set the columns from the .csv file (df) data points
+sb.scatterplot(x='Age', y='Bananas Eaten', data=df)
+plt.grid()
+plt.show()
+
